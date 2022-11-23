@@ -1,0 +1,49 @@
+ALGORITHM Lineardatastructure
+VAR  : tab1 : ARRAY_OF INTEGER[4];
+       tab2 : ARRAY_OF INTEGER[5];
+       totalc, totald, i, j, x : INTEGER := 0;
+    
+BEGIN
+
+
+FOR i FROM 1 TO tab1.length STEP 1  DO
+    FOR j FROM 1 TO tab2.length STEP 1  DO
+
+        IF (tab1[i] <> tab2[j]) THEN
+
+            x = tab1[i];
+                    
+        END_IF
+
+        IF (tab1[i] = tab2[j]) THEN
+
+            x = 0;
+                    
+        END_IF
+
+        totald = totald + x;
+
+    END_FOR
+END_FOR
+
+FOR i FROM 1 TO tab2.length STEP 1  DO
+    FOR j FROM 1 TO tab1.length STEP 1  DO
+
+        IF (tab2[i] <> tab1[j]) THEN
+
+            x = tab2[i];
+                    
+        END_IF
+
+        IF (tab2[i] = tab1[j]) THEN
+
+            x = 0;
+                    
+        END_IF
+
+        totald = totald + x;
+
+    END_FOR
+END_FOR
+    
+END
