@@ -1,0 +1,23 @@
+ALGORITHM Lineardatastructure
+VAR  : tab1 : ARRAY_OF INTEGER[4];
+       tab2 : ARRAY_OF INTEGER[5];
+       totalc, i, j : INTEGER := 0;
+       a : BOOLEAN := FALSE
+    
+BEGIN
+
+
+    FOR i FROM 1 TO tab1.length STEP 1  DO
+
+       
+        FOR j FROM 1 TO tab2.length STEP 1  DO
+        
+            IF (tab1[i] = tab2[j]) THEN
+
+                totalc = totalc + (tab1[i]*2); 
+                    
+            END_IF
+
+        END_FOR
+    
+    END_FOR
